@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>完善博客待办列表 | 屌丝程序员的自留地</title>
+  <title>算法设计手册第二版第四章课后习题解答 | 屌丝程序员的自留地</title>
   <meta name="author" content="James Shi">
   
   <meta name="description" content="这里应当是一段精彩的描述">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="完善博客待办列表"/>
+  <meta property="og:title" content="算法设计手册第二版第四章课后习题解答"/>
   <meta property="og:site_name" content="屌丝程序员的自留地"/>
 
   
@@ -50,27 +50,38 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-05-01T09:02:53.000Z"><a href="/2015/05/01/完善博客待办列表/">2015-05-01</a></time>
+        <time datetime="2015-05-01T10:39:02.000Z"><a href="/2015/05/01/算法设计手册第二版第四章课后习题解答/">2015-05-01</a></time>
       
       
   
-    <h1 class="title">完善博客待办列表</h1>
+    <h1 class="title">算法设计手册第二版第四章课后习题解答</h1>
   
 
     </header>
     <div class="entry">
       
         <blockquote>
-<p>事情总要一步一步来，慢慢完善博客。</p>
+<p>列出的解答仅为自己的思路，仅供参考，欢迎指出错误。</p>
 </blockquote>
-<h3 id="待办列表">待办列表</h3><ol>
-<li>为博客添加评论系统</li>
-<li>修改字体（大小、样式）</li>
-<li>添加footer</li>
-<li>添加分享插件</li>
+<h1 id="题目Wiki及参考答案">题目Wiki及参考答案</h1><p><a href="http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Sorting-searching-TADM2E" target="_blank" rel="external">http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Sorting-searching-TADM2E</a></p>
+<h1 id="Interview_Problems">Interview Problems</h1><h2 id="4-45">4-45</h2><h3 id="题目">题目</h3><p>Given a search string of three words, find the smallest snippet of the document that contains all three of the search words—-i.e., the snippet with smallest number of words in it. You are given the index positions where these words occur in the document, such as word1: (1, 4, 5), word2: (3, 9, 10), and word3: (2, 6, 15). Each of the lists are in sorted order, as above.</p>
+<h3 id="解答">解答</h3><p>每个单词出现的位置列表都是有序的，将它们看做是队列。设定<code>min_len</code>保存当前最短的片段的长度，初始化为-1.算法步骤如下：</p>
+<ol>
+<li>若各队列不空，将各队列最小元素出队,组成三元组</li>
+<li>得三元组<code>(a1, a2, a3)</code></li>
+<li>求三元组中的最大值<code>max</code>，与最小值<code>min</code>，则当前片段长度<code>len = max-min+1</code></li>
+<li>如果<code>min_len为-1</code>或<code>min_len</code>大于<code>len</code>，<code>min_len = len</code>，保存三元组.</li>
+<li>删除三元组中最小者<code>min</code>，若<code>min</code>对应队列不空，取新元素加入到三元组，执行2，若空，退出循环。</li>
 </ol>
-<h3 id="完成列表">完成列表</h3><ol>
-<li></li>
+<h3 id="变形及分析">变形及分析</h3><h4 id="变形">变形</h4><p>假设输入数据不是3个单词的出现位置，而直接是一个字符串数组，那么如何找到满足要求的最小片段？</p>
+<h4 id="分析">分析</h4><p>设<code>cur</code>为访问数组的当前位置，3个变量<code>l1, l2, l3</code>，代表<code>cur</code>前面离<code>cur</code>最近的3个单词(w1, w2, w3)的位置。若cur上的单词为3个单词之一，不妨设为w3，则计算w3与w1,w2的距离即<code>cur-l1+1</code>和<code>cur-l2+1</code>，取小者为<code>min</code>，另<code>min</code>与<code>min_len</code>比较，若min更小，保存<code>min</code>，及当前3个单词的位置。当遍历数组结束时，最后的<code>min_len</code>与保存的3元素的位置即满足要求的最小片段。</p>
+<h2 id="4-46">4-46</h2><h3 id="题目-1">题目</h3><p>You are given 12 coins. One of them is heavier or lighter than the rest. Identify this coin in just three weighings.<br>Note - weighings are with a balance, where you can have a greater than, equal to, or less than result. You can’t do this with a digital scale.</p>
+<h3 id="解答-1">解答</h3><p>答案Wiki之中给出的3步解决的办法，但是我想不到这个解决方案。下面讨论一下 <strong>二分搜索</strong>在这里的应用。</p>
+<p>题目是不知道是偏重还是偏轻的，如果知道偏重或偏轻，用二分搜索可3步解决。这种情况下，可以使用4步二分搜索。</p>
+<ol>
+<li>分为3堆，各4个硬币，记为a, b, c.</li>
+<li>比较(a, b) 和 (a, c). a, b, c三者中必有一个是偏大或偏小，从这两次比较重可得谁偏大或偏小。</li>
+<li>假设得到的是a偏大，再将a进行两次二分搜索，即可的偏大的那枚硬币。</li>
 </ol>
 
       
@@ -81,7 +92,7 @@
         
   
   <div class="tags">
-    <a href="/tags/待办/">待办</a>
+    <a href="/tags/TADM/">TADM</a>, <a href="/tags/排序/">排序</a>, <a href="/tags/搜索/">搜索</a>, <a href="/tags/面试/">面试</a>
   </div>
 
         
@@ -124,7 +135,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yoursite.com/2015/05/01/完善博客待办列表/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yoursite.com/2015/05/01/算法设计手册第二版第四章课后习题解答/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
