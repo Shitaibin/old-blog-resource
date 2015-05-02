@@ -63,13 +63,14 @@
         <blockquote>
 <p>事情总要一步一步来，慢慢完善博客。</p>
 </blockquote>
-<h3 id="待办列表">待办列表</h3><ol>
+<h2 id="待办列表">待办列表</h2><ol>
 <li>为博客添加评论系统</li>
 <li>修改字体（大小、样式）</li>
 <li>添加footer</li>
 <li>添加分享插件</li>
+<li>Bug：使用搜索无结果</li>
 </ol>
-<h3 id="完成列表">完成列表</h3><ol>
+<h2 id="完成列表">完成列表</h2><ol>
 <li></li>
 </ol>
 
@@ -110,23 +111,22 @@
 
 
 <section id="comment">
-  <h1 class="title">留言</h1>
-
-  
-      <div id="fb-root"></div>
-<script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<div class="fb-comments" data-href="http://yoursite.com/2015/05/01/完善博客待办列表/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
-      
-  
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"stb"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
 </section>
 
 </div></div>
@@ -156,7 +156,7 @@
   
     <li><a href="/tags/Github-Pages/">Github Pages</a><small>1</small></li>
   
-    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+    <li><a href="/tags/Hexo/">Hexo</a><small>2</small></li>
   
     <li><a href="/tags/TADM/">TADM</a><small>1</small></li>
   
