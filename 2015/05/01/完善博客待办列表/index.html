@@ -78,7 +78,6 @@
 <li>主页不许要显示全文</li>
 <li>修改footer样式</li>
 <li>更改分享插件</li>
-<li>Bug：使用搜索无结果</li>
 <li>修改markdown代码高亮</li>
 <li>调整目录样式，显示序号太难看了</li>
 </ol>
@@ -86,6 +85,9 @@
 <li>为博客添加评论系统</li>
 <li>修改字体（大小、样式）</li>
 <li>改变404</li>
+<li>优化加载速度</li>
+<li>使用搜索无结果</li>
+<li>取消分享: <code>layout\...\article.ejs</code>删除`&lt;%- partial(‘post/share’) %&gt;</li>
 </ol>
 <h3 id="不可完成">不可完成</h3><ol>
 <li>修改多说，去掉不必要的账号登陆：人人，豆瓣，开心(没有提供接口)</li>
@@ -102,24 +104,6 @@
     <a href="/tags/待办/">待办</a>
   </div>
 
-        
-  <div class="addthis addthis_toolbox addthis_default_style">
-    
-      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-    
-    
-      <a class="addthis_button_tweet"></a>
-    
-    
-      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-    
-    
-      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
       
       <div class="clearfix"></div>
     </footer>
@@ -129,7 +113,7 @@
 
 <section id="comment">
 <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2015/05/01/完善博客待办列表/" data-title="完善博客待办列表" data-url="http://yoursite.com/2015/05/01/完善博客待办列表/"></div>
+  <div class="ds-thread" data-thread-key="2015/05/01/完善博客待办列表/" data-title="完善博客待办列表" data-url="http://shitaibin.github.io/2015/05/01/完善博客待办列表/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -151,7 +135,7 @@ var duoshuoQuery = {short_name:"stb"};
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
     <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="q" value="site:yoursite.com">
+    <input type="hidden" name="q" value="site:shitaibin.github.io">
   </form>
 </div>
 
@@ -173,7 +157,7 @@ var duoshuoQuery = {short_name:"stb"};
   
     <li><a href="/tags/Github-Pages/">Github Pages</a><small>1</small></li>
   
-    <li><a href="/tags/Hexo/">Hexo</a><small>2</small></li>
+    <li><a href="/tags/Hexo/">Hexo</a><small>3</small></li>
   
     <li><a href="/tags/TADM/">TADM</a><small>2</small></li>
   

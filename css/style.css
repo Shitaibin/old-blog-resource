@@ -9,7 +9,7 @@
   padding: 0;
 }
 body {
-  background: #eee;
+  background: #fff;
   color: #444;
   font-family: "Georgia", serif;
   font-size: 14px;
@@ -385,7 +385,7 @@ article .entry .caption {
   margin-top: 5px;
   color: #999;
   position: relative;
-  font-size: 1.5em;
+  font-size: 1em;
   padding-left: 25px;
 }
 article .entry .caption:before {
@@ -800,7 +800,7 @@ figure.highlight .gutter {
   text-align: right;
 }
 figure.highlight .code {
-  padding-left: 15px;
+  padding-left: 0px;
   border-left: 1px solid #fff;
   color: #666;
 }
