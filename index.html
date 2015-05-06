@@ -64,7 +64,7 @@
         
           <div id="toc" class="toc-article">
           <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目Wiki及参考答案"><span class="toc-number">1.</span> <span class="toc-text">题目Wiki及参考答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的解答"><span class="toc-number">2.</span> <span class="toc-text">我的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-number">2.1.</span> <span class="toc-text">遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-6"><span class="toc-number">2.1.1.</span> <span class="toc-text">5-6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-7"><span class="toc-number">2.1.2.</span> <span class="toc-text">5-7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-8"><span class="toc-number">2.1.3.</span> <span class="toc-text">5-8</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-9"><span class="toc-number">2.1.4.</span> <span class="toc-text">5-9</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-10"><span class="toc-number">2.1.5.</span> <span class="toc-text">5-10</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目Wiki及参考答案"><span class="toc-number">1.</span> <span class="toc-text">题目Wiki及参考答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的解答"><span class="toc-number">2.</span> <span class="toc-text">我的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-number">2.1.</span> <span class="toc-text">遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-6"><span class="toc-number">2.1.1.</span> <span class="toc-text">5-6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-7"><span class="toc-number">2.1.2.</span> <span class="toc-text">5-7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-8"><span class="toc-number">2.1.3.</span> <span class="toc-text">5-8</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-9"><span class="toc-number">2.1.4.</span> <span class="toc-text">5-9</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-10"><span class="toc-number">2.1.5.</span> <span class="toc-text">5-10</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-12"><span class="toc-number">2.1.6.</span> <span class="toc-text">5-12</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-13"><span class="toc-number">2.1.7.</span> <span class="toc-text">5-13</span></a></li></ol></li></ol></li></ol>
           </div>
         
         <blockquote>
@@ -117,6 +117,52 @@
 <p>为节点设置一个标记，若已算过该子树，标记设置为true。当再次访问此子树时，可直接获得该子树的结果。再次访问的次数不会超过m，时间复杂度为O(n+m)。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> node&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">char</span> <span class="keyword">operator</span>;</span><br><span class="line">    <span class="keyword">int</span> flag;           <span class="comment">// 该子树的值是否已计算</span></span><br><span class="line">    <span class="keyword">struct</span> node *left;</span><br><span class="line">    <span class="keyword">struct</span> node *right;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">calc_tree(root):</span><br><span class="line">    <span class="keyword">if</span> root-&gt;left = null and root-&gt;right = null</span><br><span class="line">        <span class="keyword">return</span> root-&gt;val</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> root-&gt;left and root-&gt;right and flag = <span class="keyword">true</span></span><br><span class="line">        <span class="keyword">return</span> root-&gt;val</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        op1 = calc_tree(root-&gt;left)</span><br><span class="line">        op2 = calc_tree(root-&gt;right)</span><br><span class="line">        root-&gt;val = calc(op1, root-&gt;<span class="keyword">operator</span>, op2) <span class="comment">// 进行基本运算</span></span><br><span class="line">        root-&gt;flag = <span class="keyword">true</span></span><br><span class="line">        <span class="keyword">return</span>   root-&gt;val</span><br></pre></td></tr></table></figure>
+<h4 id="5-12">5-12</h4><p>题目</p>
+<p>The square of a directed graph G=(V,E) is the graph G2=(V,E2) such that (u,w)∈E2 iff there exists v∈V such that (u,v)∈E and (v,w)∈E; i.e., there is a path of exactly two edges from u to w. square of a graph Give efficient algorithms for both adjacency lists and matrices.</p>
+<p>解答</p>
+<p>首先，必须清楚这是有向图。</p>
+<ol>
+<li><p>邻接矩阵</p>
+<p> 这个题目的重点是找到节点v的孙子节点w，连接v与w。如果采用暴力的方法三层for循环遍历邻接矩阵，时间复杂度是O(n<sup>3</sup>)，代价还是很大的，尤其是n比较大，且图G是稀疏图。</p>
+<p> 如果能有效降低for循环内的次数，虽然时间复杂度是O(n<sup>3</sup>)，但是实际上可能也不会那么高了。</p>
+<p> 优化方案是为每个节点建立一个队列，那么所有队列的总长度为m（图G边的总数）。这样，遍历该节点的队列就可以得到该节点的孩子。</p>
+ <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i from <span class="number">1</span> to n</span><br><span class="line">    <span class="keyword">for</span> j from <span class="number">1</span> to n</span><br><span class="line">        <span class="keyword">if</span> G[i,j] = <span class="number">1</span>, append(q[i], j)  <span class="comment">// 将j添加到i的队列中</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i from <span class="number">1</span> to n</span><br><span class="line">    foreach j in q[i]</span><br><span class="line">        foreach k in q[j]</span><br><span class="line">            square_G[i,k] = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p> 构建队列的时间复杂度为O(n<sup>2</sup>)，构建G<sup>2</sup>的外面两层循环时间复杂度为O(m)。则每个队列的平均长度为 m/n，则内层循环的时间复杂度为O(m/n)，总为O(m<sup>2</sup>/n)。从另外一个角度讲，G<sup>2</sup>的边数小于2m（你可以试着证明一下，我还不能给出准确的证明），那么<code>square_G[i,k] = 1</code>的执行次数小于2m。时间复杂度应该为O(n<sup>2</sup>+m)。</p>
+</li>
+<li><p>邻接链表</p>
+<p> 现在回想一下，在邻接矩阵的解决方案中，使用的队列，就相当于邻接链表。那我们就省去了构建队列的时间，时间复杂度O(m)。</p>
+ <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i from <span class="number">1</span> to n</span><br><span class="line">    foreach j in g-&gt;edges[i]</span><br><span class="line">        foreach k in g-&gt;edges[j]</span><br><span class="line">            insert_edges(square_g-&gt;edges, i, k, TRUE)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="5-13">5-13</h4><p>题目</p>
+<p>A vertex cover of a graph G=(V,E) is a subset of vertices V′ such that each edge in E is incident on at least one vertex of V′.<br>(a) Give an efficient algorithm to find a minimum-size vertex cover if G is a tree.<br>(b) Let G=(V,E) be a tree such that the weight of each vertex is equal to the degree of that vertex. Give an efficient algorithm to find a minimum-weight vertex cover of G.<br>(c) Let G=(V,E) be a tree with arbitrary weights associated with the vertices. Give an efficient algorithm to find a minimum-weight vertex cover of G.</p>
+<p>解答</p>
+<ul>
+<li><p>(a) 解决思路如下：</p>
+<ol>
+<li>叶节点l是不能要的，因为一个叶节点才连一条边，性价比太低了。</li>
+<li>那就需要叶节点的父节点p。</li>
+<li>p的父节点也就不需要了。</li>
+<li><p>删除p子树，就会得到一颗新的树。重复操作，直到得到空树或只有一个节点的树。</p>
+<p>怎么证明，该算法得到的就是最小的集合？<br>因为我们每次移去的子树，都尽量以一个中心节点，带走尽量多的边，那么最后得到的节点的集合，必然是最小的。</p>
+<p>插图如下(以2叉树做例子)：</p>
+<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-13b.jpg" alt="顶点覆盖1"><br><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-13a.jpg" alt="顶点覆盖2"></p>
+</li>
+</ol>
+</li>
+<li><p>(b) 解决思路如下：</p>
+<ol>
+<li>在(a)叶节点性价比最低了，然后此时，叶节点性价比最高了。</li>
+<li>叶节点的父节点性价比低。</li>
+<li>删除叶节点及父节点。重复操作，直到得到空树或只有一个节点的树。</li>
+</ol>
+<ul>
+<li>树是有向图，只考虑了节点的出度。</li>
+</ul>
+</li>
+<li><p>(c) 待定</p>
+</li>
+</ul>
 
       
     </div>
