@@ -63,7 +63,7 @@
         
           <div id="toc" class="toc-article">
           <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目Wiki及参考答案"><span class="toc-number">1.</span> <span class="toc-text">题目Wiki及参考答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的解答"><span class="toc-number">2.</span> <span class="toc-text">我的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-number">2.1.</span> <span class="toc-text">遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-6"><span class="toc-number">2.1.1.</span> <span class="toc-text">5-6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-7"><span class="toc-number">2.1.2.</span> <span class="toc-text">5-7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-8"><span class="toc-number">2.1.3.</span> <span class="toc-text">5-8</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-9"><span class="toc-number">2.1.4.</span> <span class="toc-text">5-9</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-10"><span class="toc-number">2.1.5.</span> <span class="toc-text">5-10</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-12"><span class="toc-number">2.1.6.</span> <span class="toc-text">5-12</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-13"><span class="toc-number">2.1.7.</span> <span class="toc-text">5-13</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目Wiki及参考答案"><span class="toc-number">1.</span> <span class="toc-text">题目Wiki及参考答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的解答"><span class="toc-number">2.</span> <span class="toc-text">我的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-number">2.1.</span> <span class="toc-text">遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-6"><span class="toc-number">2.1.1.</span> <span class="toc-text">5-6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-7"><span class="toc-number">2.1.2.</span> <span class="toc-text">5-7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-8"><span class="toc-number">2.1.3.</span> <span class="toc-text">5-8</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-9"><span class="toc-number">2.1.4.</span> <span class="toc-text">5-9</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-10"><span class="toc-number">2.1.5.</span> <span class="toc-text">5-10</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-12"><span class="toc-number">2.1.6.</span> <span class="toc-text">5-12</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-13"><span class="toc-number">2.1.7.</span> <span class="toc-text">5-13</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-14"><span class="toc-number">2.1.8.</span> <span class="toc-text">5-14</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-15"><span class="toc-number">2.1.9.</span> <span class="toc-text">5-15</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-16"><span class="toc-number">2.1.10.</span> <span class="toc-text">5-16</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-17"><span class="toc-number">2.1.11.</span> <span class="toc-text">5-17</span></a></li></ol></li></ol></li></ol>
           </div>
         
         <blockquote>
@@ -149,17 +149,56 @@
 </li>
 </ol>
 </li>
-<li><p>(b) 解决思路如下：</p>
-<ol>
-<li>在(a)叶节点性价比最低了，然后此时，叶节点性价比最高了。</li>
-<li>叶节点的父节点性价比低。</li>
-<li>删除叶节点及父节点。重复操作，直到得到空树或只有一个节点的树。</li>
-</ol>
-<ul>
-<li>树是有向图，只考虑了节点的出度。</li>
-</ul>
+<li><p>(b) 任何一条边在V’中至少有一个节点，那么V’中所有节点的度的和sum至少为m（图G的边的总数）减少V’中相邻节点的数量，就能降低sum的值。使用(a)中的方法，可以尽量降低sum的值，因为在(a)中选择的点尽量是隔代选择。另外的隔代选择方案是吧叶节点以及他们的父亲的父亲作为目标节点，得到的V’同样是尽量小的。</p>
 </li>
-<li><p>(c) 待定</p>
+<li><p>(c) 待定<br>  要把树作为有向图处理吗？虽然我们把树表示成带箭头的，但是树是无向图，<a href="http://en.wikipedia.org/wiki/Tree_%28graph_theory%29" target="_blank" rel="external">维基百科</a>。</p>
+</li>
+</ul>
+<h4 id="5-14">5-14</h4><p>题目</p>
+<p>A <em>vertex cover</em> of a graph G=(V,E) is a subset of vertices V′∈V such that every edge in E contains at least one vertex from V′. Delete all the leaves from any depth-first search tree of G. Must the remaining vertices form a vertex cover of G? Give a proof or a counterexample.</p>
+<p>解答</p>
+<p>否定。反例：<br>下图得到的DFS序列可以是[1, 3, 2]，叶节点为2,3。那么V’={1}。并不是一个顶点覆盖。</p>
+<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-14.JPG" alt="5-14反例"></p>
+<h4 id="5-15">5-15</h4><p>题目</p>
+<p>A vertex cover of a graph G=(V,E) is a subset of vertices V′∈V such that every edge in E contains at least one vertex from V′. An independent set of graph G=(V,E) is a subset of vertices V′∈V such that no edge in E contains both vertices from V′.<br>An <em>independent vertex cover</em> is a subset of vertices that is both an independent set and a vertex cover of G. Give an efficient algorithm for testing whether G contains an independent vertex cover. What classical graph problem does this reduce to?</p>
+<p>解答</p>
+<p>着色问题。愣是没有想到。</p>
+<h4 id="5-16">5-16</h4><p>题目</p>
+<p>An <em>independent set</em> of an undirected graph G=(V,E) is a set of vertices U such that no edge in E is incident on two vertices of U.</p>
+<p>(a) Give an efficient algorithm to find a maximum-size independent set if G is a tree.<br>(b) Let G=(V,E) be a tree with weights associated with the vertices such that the weight of each vertex is equal to the degree of that vertex. Give an efficient algorithm to find a maximum independent set of G.<br>(c) Let G=(V,E) be a tree with arbitrary weights associated with the vertices. Give an efficient algorithm to find a maximum independent set of G.</p>
+<p>解答</p>
+<ul>
+<li><p>(a) 基于5-15给出的答案。我们可以先把图着色，然后遍历得到不同颜色的序列，去较短的序列作为最小的独立集合。若不能着色，则不存在最小独立集合。</p>
+</li>
+<li><p>(b) 有以下几点需要注意：</p>
+</li>
+</ul>
+<ol>
+<li>树肯定是可以着色的。</li>
+<li>着色方案是固定的：孩子与父亲是相反的颜色。</li>
+<li>题目要求找到最大的独立集合。</li>
+</ol>
+<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-16-b.JPG" alt="二叉树着色"></p>
+<p>先着色，进行一次遍历，将不同颜色的放入两个序列，取总度的和较大者。</p>
+<p>不进行着色的处理方案:设置root颜色为0，则其子为1。递归遍历左右子树，时间复杂度为O(n)。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void <span class="function"><span class="title">classify</span><span class="params">(root, color)</span></span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="attribute">color</span> = <span class="number">0</span> then</span><br><span class="line">        put root into list1</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        put root into list2</span><br><span class="line">    <span class="keyword">if</span> root-&gt;<span class="attribute">left</span> then</span><br><span class="line">        <span class="function"><span class="title">classify</span><span class="params">(root-&gt;left, !color)</span></span></span><br><span class="line">    <span class="keyword">if</span> root-&gt;<span class="attribute">right</span> then</span><br><span class="line">        <span class="function"><span class="title">classify</span><span class="params">(root-&gt;right, !color)</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(c) 与(b)的不同仅仅是最后，取权重的和的较大者。</li>
+</ul>
+<h4 id="5-17">5-17</h4><p>题目</p>
+<p>Consider the problem of determining whether a given undirected graph G=(V,E) contains a triangle or cycle of length 3.</p>
+<p>(a) Give an O(|V|<sup>3</sup>) to find a triangle if one exists.<br>Improve your algorithm to run in time O(|V|·|E|). You may assume |V|≤|E|.<br>(b) Observe that these bounds gives you time to convert between the adjacency matrix and adjacency list representations of G.</p>
+<p>解答</p>
+<ul>
+<li><p>(a) Brute force。</p>
+  <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">each</span> inode <span class="operator">in</span> V <span class="built_in">do</span></span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">each</span> jnode <span class="operator">in</span> Adj[inode] <span class="built_in">do</span></span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">each</span> knode <span class="operator">in</span> Adj[jnode] <span class="built_in">do</span></span><br><span class="line">            <span class="keyword">for</span> <span class="keyword">each</span> lnode <span class="operator">in</span> Adj[knode] <span class="built_in">do</span></span><br><span class="line">                <span class="keyword">if</span> lnode = inode <span class="keyword">then</span></span><br><span class="line">                    <span class="constant">return</span> <span class="constant">true</span></span><br></pre></td></tr></table></figure>
+<p>  时间复杂度是O(n<sup>4</sup>)，看样子不符合题目的要求。</p>
+</li>
+<li><p>(b) DFS。</p>
+<p>  DFS可以发现图中的环，那么当检测到环时，可以进进一步检测环的大小是否为3.采用的就是DFS一次遍历，因此时间复杂度是O(|V|+|E|)。</p>
+  <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">process_edge(v, y):</span><br><span class="line">    <span class="keyword">if</span> parent[parent[x]] = y <span class="keyword">then</span></span><br><span class="line">        <span class="variable">is_triangle =</span> <span class="constant">true</span></span><br><span class="line">        <span class="variable">finish =</span> <span class="constant">true</span></span><br></pre></td></tr></table></figure>
+<p>  <img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-17.JPG" alt="5-17"></p>
+<p>  github仓库源码及测试数据:<a href="https://github.com/Shitaibin/The-Algorithm-Design-Manual/tree/master/5.11" target="_blank" rel="external">传送门—&gt;</a></p>
 </li>
 </ul>
 
