@@ -104,7 +104,7 @@
 <p>遍历需要O(nm)，插入需要O(1)，故共需要O(nm)。</p>
 <h4 id="5-9">5-9</h4><p>题目</p>
 <p>Suppose an arithmetic expression is given as a tree. Each leaf is an integer and each internal node is one of the standard arithmetical operations <code>(+,−,*,/)</code>. For example, the expression <code>2+3*4+(3*4)/5</code> is represented by the tree in Figure 5.17(a).<br>Give an O(n) algorithm for evaluating such an expression, where there are n nodes in the tree.</p>
-<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/444.JPG" alt="Figure 5.17"></p>
+<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Figure 5.17.JPG" alt="Figure 5.17"></p>
 <p>解答</p>
 <p>采用递归的方式，获得左子树操作数和右子树操作数，然后做运算，每个节点都会访问一次，时间复杂度O(n)。</p>
 <p>假设树节点的定义为：</p>
