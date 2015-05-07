@@ -9,7 +9,7 @@
   padding: 0;
 }
 body {
-  background: #fff;
+  background: #eee;
   color: #444;
   font-family: "Georgia", serif;
   font-size: 14px;
@@ -136,8 +136,6 @@ a:hover {
   margin-left: 30px;
 }
 article {
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   background: #fff;
   font-size: 1.2em;
 }
@@ -316,11 +314,11 @@ article .entry pre {
   font-family: Monaco, Menlo, Consolas, Courier New, monospace;
 }
 article .entry code {
-  background: #eee;
+  background: #fff;
   color: #666;
   padding: 0 5px;
   margin: 0 2px;
-  font-size: 1em;
+  font-size: 1.2em;
   border: 1px solid #ddd;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -559,8 +557,6 @@ ol.toc {
 #comment {
   padding: 20px;
   background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   margin-bottom: 50px;
 }
 #comment .title {
@@ -610,8 +606,6 @@ ol.toc {
   content: '\f07b';
 }
 .archive {
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   border-bottom: 1px solid #ddd;
   margin-bottom: 50px;
 }
@@ -634,8 +628,6 @@ ol.toc {
 }
 #sidebar .widget {
   background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   margin-bottom: 30px;
   word-wrap: break-word;
 }
@@ -767,13 +759,13 @@ figure.highlight {
   border: 1px solid #ddd;
   margin-top: 15px;
   padding: 7px 15px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
   text-shadow: 0 0 1px #fff;
   line-height: 1.6;
   overflow: auto;
   position: relative;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 figure.highlight figcaption {
   color: #999;
@@ -815,7 +807,6 @@ pre .pi,
 pre .lisp .string,
 pre .javadoc {
   color: #93a1a1;
-  font-style: italic;
 }
 pre .keyword,
 pre .winutils,
