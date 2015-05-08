@@ -63,7 +63,16 @@
         
         <p>用Firebug看了一下加载速度，OMG!</p>
 <p><img src="http://7xixtr.com1.z0.glb.clouddn.com/loading-speed.JPG" alt="加载速度"></p>
-<p>jquery.min.js</p>
+<ol>
+<li><p>替换jquery.min.js</p>
+<p> 该js的引用在文件<code>themes\light\layout\_partial\after_footer.ejs</code>第一行。<br> 将包含google的哪一条替换成：</p>
+ <figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> config.root </span>%&gt;<span class="xml"><span class="tag"><span class="value">js/jquery-2.0.3.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p> 然后在目录<code>themes\light\source\js</code>中新建jquery-2.0.3.min.js，该文件内容为：<a href="https://raw.githubusercontent.com/yangruihan/yangruihan.github.io/master/js/jquery-2.0.3.min.js" target="_blank" rel="external">传送门</a>。</p>
+</li>
+<li><p>apis.google.com</p>
+<p> 这个出现在文章分享处，文章分享其他没有太大的意义，至少目前是这样的，所以我删除了文件分享的加载代码。<br> 在<code>layout\...\article.ejs</code>中，删除<code>&lt;%- partial(&#39;post/share&#39;) %&gt;</code></p>
+</li>
+</ol>
 
       
     </div>
