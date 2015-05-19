@@ -9,7 +9,7 @@
   padding: 0;
 }
 body {
-  background: #fff;
+  background: #dcdcdc;
   color: #444;
   font-family: "Georgia", serif;
   font-size: 14px;
@@ -715,7 +715,7 @@ ol.toc {
   text-shadow: 0 0 1px #fff;
 }
 .entry .gist {
-  background: #eee;
+  background: #ffd700;
   border: 1px solid #ddd;
   margin-top: 15px;
   padding: 7px 15px;
@@ -733,7 +733,7 @@ ol.toc {
   font-size: 0.9em;
 }
 .entry .gist .gist-file .gist-data {
-  background: none;
+  background: #ffd700;
   border-bottom: none;
 }
 .entry .gist .gist-file .gist-data pre {
@@ -741,7 +741,7 @@ ol.toc {
   font-family: Monaco, Menlo, Consolas, Courier New, monospace;
 }
 .entry .gist .gist-file .gist-meta {
-  background: none;
+  background: #ffd700;
   color: #999;
   margin-top: 5px;
   padding: 0;
@@ -755,13 +755,14 @@ ol.toc {
   color: #258fb8;
 }
 figure.highlight {
-  background: #eee;
+  background: #1c1c1c;
+  font-color: #fff;
   border: 1px solid #ddd;
   margin-top: 15px;
   padding: 7px 15px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
-  text-shadow: 0 0 1px #fff;
+  text-shadow: 0 0 2px #fff;
   line-height: 1.6;
   overflow: auto;
   position: relative;
@@ -770,7 +771,7 @@ figure.highlight {
 figure.highlight figcaption {
   color: #999;
   margin-bottom: 5px;
-  text-shadow: 0 0 1px #fff;
+  text-shadow: 0 0 4px #fff;
 }
 figure.highlight figcaption a {
   position: absolute;
@@ -780,21 +781,22 @@ figure.highlight pre {
   border: none;
   padding: 0;
   margin: 0;
+  background: #1c1c1c;
 }
 figure.highlight table {
   margin-top: 0;
   border-spacing: 0;
 }
 figure.highlight .gutter {
-  color: #999;
+  color: #fff;
   padding-right: 15px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid;
   text-align: right;
 }
 figure.highlight .code {
   padding-left: 0px;
   border-left: 1px solid #fff;
-  color: #666;
+  color: #1c1c1c;
 }
 figure.highlight .line {
   height: 20px;
@@ -806,7 +808,7 @@ pre .doctype,
 pre .pi,
 pre .lisp .string,
 pre .javadoc {
-  color: #93a1a1;
+  color: #fff;
 }
 pre .keyword,
 pre .winutils,

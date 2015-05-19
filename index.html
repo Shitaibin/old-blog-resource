@@ -30,12 +30,10 @@
 <body>
   <header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">屌丝程序员的自留地</a></h1>
-  <h2><a href="/">码农在此种地</a></h2>
+  <h2><a href="/">屌丝码农 登山骑行加摄影</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
-    
-      <li><a href="/">首页</a></li>
     
       <li><a href="/archives">文章列表</a></li>
     
@@ -45,6 +43,46 @@
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-05-19T14:16:21.068Z"><a href="/2015/05/19/主题测试/">2015-05-19</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/05/19/主题测试/"></a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">文章目录</strong>
+          
+          </div>
+        
+        <p>这是一行代码<code>def fun():</code>。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> node&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">char</span> <span class="keyword">operator</span>;</span><br><span class="line">    <span class="keyword">int</span> flag;           <span class="comment">// 该子树的值是否已计算</span></span><br><span class="line">    <span class="keyword">struct</span> node *left;</span><br><span class="line">    <span class="keyword">struct</span> node *right;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -61,24 +99,16 @@
     </header>
     <div class="entry">
       
-        
         <p>用Firebug看了一下加载速度，OMG!</p>
 <p><img src="http://7xixtr.com1.z0.glb.clouddn.com/loading-speed.JPG" alt="加载速度"></p>
-<ol>
-<li><p>替换jquery.min.js</p>
-<p> 该js的引用在文件<code>themes\light\layout\_partial\after_footer.ejs</code>第一行。<br> 将包含google的哪一条替换成：</p>
- <figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> config.root </span>%&gt;<span class="xml"><span class="tag"><span class="value">js/jquery-2.0.3.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p> 然后在目录<code>themes\light\source\js</code>中新建jquery-2.0.3.min.js，该文件内容为：<a href="https://raw.githubusercontent.com/yangruihan/yangruihan.github.io/master/js/jquery-2.0.3.min.js" target="_blank" rel="external">传送门</a>。</p>
-</li>
-<li><p>apis.google.com</p>
-<p> 这个出现在文章分享处，文章分享其他没有太大的意义，至少目前是这样的，所以我删除了文件分享的加载代码。<br> 在<code>layout\...\article.ejs</code>中，删除<code>&lt;%- partial(&#39;post/share&#39;) %&gt;</code></p>
-</li>
-</ol>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2015/05/06/Optimize-of-hexo-blog/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -106,200 +136,20 @@
     </header>
     <div class="entry">
       
-        
-          <div id="toc" class="toc-article">
-          <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目Wiki及参考答案"><span class="toc-number">1.</span> <span class="toc-text">题目Wiki及参考答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的解答"><span class="toc-number">2.</span> <span class="toc-text">我的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-number">2.1.</span> <span class="toc-text">遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-6"><span class="toc-number">2.1.1.</span> <span class="toc-text">5-6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-7"><span class="toc-number">2.1.2.</span> <span class="toc-text">5-7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-8"><span class="toc-number">2.1.3.</span> <span class="toc-text">5-8</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-9"><span class="toc-number">2.1.4.</span> <span class="toc-text">5-9</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-10"><span class="toc-number">2.1.5.</span> <span class="toc-text">5-10</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-12"><span class="toc-number">2.1.6.</span> <span class="toc-text">5-12</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-13"><span class="toc-number">2.1.7.</span> <span class="toc-text">5-13</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-14"><span class="toc-number">2.1.8.</span> <span class="toc-text">5-14</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-15"><span class="toc-number">2.1.9.</span> <span class="toc-text">5-15</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-16"><span class="toc-number">2.1.10.</span> <span class="toc-text">5-16</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-17"><span class="toc-number">2.1.11.</span> <span class="toc-text">5-17</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-18"><span class="toc-number">2.1.12.</span> <span class="toc-text">5-18</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-19"><span class="toc-number">2.1.13.</span> <span class="toc-text">5-19</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-20"><span class="toc-number">2.1.14.</span> <span class="toc-text">5-20</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-21"><span class="toc-number">2.1.15.</span> <span class="toc-text">5-21</span></a></li></ol></li></ol></li></ol>
-          </div>
-        
         <blockquote>
 <p>列出的解答仅为自己的思路，仅供参考，欢迎指出错误。</p>
 </blockquote>
-<h2 id="题目Wiki及参考答案">题目Wiki及参考答案</h2><p><a href="http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Graphs-TADM2E" target="_blank" rel="external">http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Graphs-TADM2E</a></p>
+<h2 id="题目Wiki及参考答案">题目Wiki及参考答案</h2><p><a href="http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Graphs-TADM2E">http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Graphs-TADM2E</a></p>
 <h2 id="我的解答">我的解答</h2><h3 id="遍历">遍历</h3><h4 id="5-6">5-6</h4><p>题目</p>
 <p>In breadth-first and depth-first search, an undiscovered node is marked discovered when it is first encountered, and marked processed when it has been completely searched. At any given moment, several nodes might be simultaneously in the discovered state.<br>(a) Describe a graph on n vertices and a particular starting vertex v such that Θ(n) nodes are simultaneously in the discovered state during a breadth-first search starting from v.<br>(b) Describe a graph on n vertices and a particular starting vertex v such that Θ(n) nodes are simultaneously in the discovered state during a depth-first search starting from v.<br>(c) Describe a graph on n vertices and a particular starting vertex v such that at some point Θ(n) nodes remain undiscovered, while Θ(n) nodes have been processed during a depth-first search starting from v. (Note, there may also be discovered nodes.)</p>
-<p>解答</p>
-<p>(a) Wrost case: 所有的节点都与根节点v直接相连。<br>(b) Wrost case: 所有的节点的出度都小于等于2，即所有的点都在一条线上。<br>(c) 非连通图。</p>
-<h4 id="5-7">5-7</h4><p>题目</p>
-<p>Given pre-order and in-order traversals of a binary tree, is it possible to reconstruct the tree? If so, sketch an algorithm to do it. If not, give a counterexample. Repeat the problem if you are given the pre-order and post-order traversals.</p>
-<p>解答</p>
-<p>(a) pre-order and in-order</p>
-<p>先序遍历特点：第一个节点是根节点。<br>中序遍历特点：先遍历根节点的左子树，再根节点，然后根节点的右子树。</p>
-<p>算法思路：</p>
-<ol>
-<li>根据先序遍历序列得到root。</li>
-<li>根据root和中序遍历序列得到左右子树。</li>
-<li>递归建立左子树。</li>
-<li>递归建立右子树。</li>
-</ol>
-<p>(b) pre-order and post-order</p>
-<p>后序遍历特点：先遍历根节点的左子树，再根节点的右子树，然后根节点。</p>
-<p>只有先、后遍历序列，无法划分左右子树，无法建立树。</p>
-<h4 id="5-8">5-8</h4><p>题目</p>
-<p>Present correct and efficient algorithms to convert an undirected graph G between the following graph data structures. You must give the time complexity of each algorithm, assuming n vertices and m edges.<br>(a) Convert from an adjacency matrix to adjacency lists.<br>(b) Convert from an adjacency list to an incidence matrix. An incidence matrix M has a row for each vertex and a column for each edge, such that M[i,j]=1 if vertex i is part of edge j, otherwise M[i,j]=0.<br>(c) Convert from an incidence matrix to adjacency lists.</p>
-<p>解答</p>
-<p>访问所有的边和点的时间复杂度：<br>邻接矩阵：O(n<sup>2</sup>)<br>邻接链表：O(n+m)</p>
-<p>(a) 无向图的邻接矩阵具有对称性，不必遍历整个矩阵。</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">from</span> <span class="number">1</span> <span class="keyword">to</span> n</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">from</span> x+<span class="number">1</span> <span class="keyword">to</span> n</span><br><span class="line">        <span class="keyword">if</span> M[x][y] = <span class="number">1</span></span><br><span class="line">            insert(&amp;g, x, y)</span><br></pre></td></tr></table></figure>
-<p>需要花费O(n<sup>2</sup>)从邻接矩阵读数据，然后花费O(n+m)建立邻接链表。</p>
-<p>(b) 关联矩阵：形成点和边的映射，矩阵大小为 <code>n·m</code>，建立关联矩阵并初始化需要O(nm)。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">edgesx[]    <span class="comment">// 边i连接的x节点</span></span><br><span class="line">edgesy[]    <span class="comment">// 边i连接的y节点，x&lt;y</span></span><br><span class="line">cur = -<span class="number">1</span>    <span class="comment">// 当前边的编号</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">list_2_incidence</span><span class="params">(&amp;g, IM[][])</span></span>:</span><br><span class="line">    <span class="keyword">for</span> x from <span class="number">1</span> to g-&gt;nvertices</span><br><span class="line">        <span class="tag">p</span> = p-&gt;edges[x]</span><br><span class="line">        while <span class="tag">p</span> != null</span><br><span class="line">            y = p-&gt;y</span><br><span class="line">            <span class="keyword">if</span> !<span class="function"><span class="title">recorded_edge</span><span class="params">(x, y)</span></span></span><br><span class="line">                <span class="function"><span class="title">recording_edge</span><span class="params">(x,y)</span></span></span><br><span class="line">                IM[x][cur] = <span class="number">1</span></span><br><span class="line">                IM[y][cur] = <span class="number">1</span></span><br><span class="line">            <span class="tag">p</span> = p-&gt;next</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">recording_edge</span><span class="params">(x, y)</span></span>:</span><br><span class="line">    <span class="keyword">if</span> (x &gt; y)</span><br><span class="line">        <span class="function"><span class="title">swap</span><span class="params">(x, y)</span></span></span><br><span class="line">    edgesx[i] = x</span><br><span class="line">    edgesy[i] = y</span><br><span class="line">    cur++</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">recorded_edge</span><span class="params">(x, y)</span></span>:</span><br><span class="line">    <span class="keyword">if</span> (x &gt; y)</span><br><span class="line">        <span class="function"><span class="title">swap</span><span class="params">(x, y)</span></span></span><br><span class="line">    <span class="keyword">for</span> <span class="tag">i</span> from <span class="number">0</span> to cur</span><br><span class="line">        <span class="keyword">if</span> x == edges[i] &amp;&amp; y == edgesy[i] <span class="comment">// 存在一个i</span></span><br><span class="line">            return <span class="number">1</span></span><br><span class="line">    return <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p>在关联矩阵中为每条边写入数据需要花费O(1)，共m条边，需要花费O(m)。从邻接链表读取数据，并检测该边是不是已经记录需要花费O(n+m<sup>2</sup>)，其中检测一条边需要O(m)。因此总的时间花费为O(nm+n+m*m) = O(nm+m<sup>2</sup>)。</p>
-<p>(c) 遍历每一条边，然后插入到邻接矩阵</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> j from <span class="number">1</span> to m</span><br><span class="line">    x = y = -<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> <span class="tag">i</span> from <span class="number">1</span> to n</span><br><span class="line">        <span class="keyword">if</span> M[i][j] = <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> x == -<span class="number">1</span>, x = <span class="tag">i</span></span><br><span class="line">            <span class="keyword">else</span> y = <span class="tag">i</span>, <span class="function"><span class="title">insert</span><span class="params">(&amp;g, x, y)</span></span>, break</span><br></pre></td></tr></table></figure>
-<p>遍历需要O(nm)，插入需要O(1)，故共需要O(nm)。</p>
-<h4 id="5-9">5-9</h4><p>题目</p>
-<p>Suppose an arithmetic expression is given as a tree. Each leaf is an integer and each internal node is one of the standard arithmetical operations <code>(+,−,*,/)</code>. For example, the expression <code>2+3*4+(3*4)/5</code> is represented by the tree in Figure 5.17(a).<br>Give an O(n) algorithm for evaluating such an expression, where there are n nodes in the tree.</p>
-<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Figure 5.17.JPG" alt="Figure 5.17"></p>
-<p>解答</p>
-<p>采用递归的方式，获得左子树操作数和右子树操作数，然后做运算，每个节点都会访问一次，时间复杂度O(n)。</p>
-<p>假设树节点的定义为：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> node&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">char</span> <span class="keyword">operator</span>;</span><br><span class="line">    <span class="keyword">struct</span> node *left;</span><br><span class="line">    <span class="keyword">struct</span> node *right;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">calc_tree(root):</span><br><span class="line">    <span class="keyword">if</span> root-&gt;left = null and root-&gt;right = null</span><br><span class="line">        <span class="keyword">return</span> root-&gt;val</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        op1 = calc_tree(root-&gt;left)</span><br><span class="line">        op2 = calc_tree(root-&gt;right)</span><br><span class="line">        <span class="keyword">return</span> calc(op1, root-&gt;<span class="keyword">operator</span>, op2)  <span class="comment">// 进行基本运算</span></span><br></pre></td></tr></table></figure>
-<h4 id="5-10">5-10</h4><p>题目</p>
-<p>Suppose an arithmetic expression is given as a DAG (directed acyclic graph) with common subexpressions removed. Each leaf is an integer and each internal node is one of the standard arithmetical operations <code>(+,−,*,/)</code>. For example, the expression <code>2+3*4+(3*4)/5</code> is represented by the DAG in Figure (see book)(b). Give an O(n+m) algorithm for evaluating such a DAG, where there are n nodes and m edges in the DAG. Hint: modify an algorithm for the tree case to achieve the desired efficiency.</p>
-<p>解答</p>
-<p>为节点设置一个标记，若已算过该子树，标记设置为true。当再次访问此子树时，可直接获得该子树的结果。再次访问的次数不会超过m，时间复杂度为O(n+m)。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> node&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="keyword">char</span> <span class="keyword">operator</span>;</span><br><span class="line">    <span class="keyword">int</span> flag;           <span class="comment">// 该子树的值是否已计算</span></span><br><span class="line">    <span class="keyword">struct</span> node *left;</span><br><span class="line">    <span class="keyword">struct</span> node *right;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">calc_tree(root):</span><br><span class="line">    <span class="keyword">if</span> root-&gt;left = null and root-&gt;right = null</span><br><span class="line">        <span class="keyword">return</span> root-&gt;val</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> root-&gt;left and root-&gt;right and flag = <span class="keyword">true</span></span><br><span class="line">        <span class="keyword">return</span> root-&gt;val</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        op1 = calc_tree(root-&gt;left)</span><br><span class="line">        op2 = calc_tree(root-&gt;right)</span><br><span class="line">        root-&gt;val = calc(op1, root-&gt;<span class="keyword">operator</span>, op2) <span class="comment">// 进行基本运算</span></span><br><span class="line">        root-&gt;flag = <span class="keyword">true</span></span><br><span class="line">        <span class="keyword">return</span>   root-&gt;val</span><br></pre></td></tr></table></figure>
-<h4 id="5-12">5-12</h4><p>题目</p>
-<p>The square of a directed graph G=(V,E) is the graph G2=(V,E2) such that (u,w)∈E2 iff there exists v∈V such that (u,v)∈E and (v,w)∈E; i.e., there is a path of exactly two edges from u to w. square of a graph Give efficient algorithms for both adjacency lists and matrices.</p>
-<p>解答</p>
-<p>首先，必须清楚这是有向图。</p>
-<ol>
-<li><p>邻接矩阵</p>
-<p> 这个题目的重点是找到节点v的孙子节点w，连接v与w。如果采用暴力的方法三层for循环遍历邻接矩阵，时间复杂度是O(n<sup>3</sup>)，代价还是很大的，尤其是n比较大，且图G是稀疏图。</p>
-<p> 如果能有效降低for循环内的次数，虽然时间复杂度是O(n<sup>3</sup>)，但是实际上可能也不会那么高了。</p>
-<p> 优化方案是为每个节点建立一个队列，那么所有队列的总长度为m（图G边的总数）。这样，遍历该节点的队列就可以得到该节点的孩子。</p>
- <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i from <span class="number">1</span> to n</span><br><span class="line">    <span class="keyword">for</span> j from <span class="number">1</span> to n</span><br><span class="line">        <span class="keyword">if</span> G[i,j] = <span class="number">1</span>, append(q[i], j)  <span class="comment">// 将j添加到i的队列中</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i from <span class="number">1</span> to n</span><br><span class="line">    foreach j in q[i]</span><br><span class="line">        foreach k in q[j]</span><br><span class="line">            square_G[i,k] = <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p> 构建队列的时间复杂度为O(n<sup>2</sup>)，构建G<sup>2</sup>的外面两层循环时间复杂度为O(m)。则每个队列的平均长度为 m/n，则内层循环的时间复杂度为O(m/n)，总为O(m<sup>2</sup>/n)。从另外一个角度讲，G<sup>2</sup>的边数小于2m（你可以试着证明一下，我还不能给出准确的证明），那么<code>square_G[i,k] = 1</code>的执行次数小于2m。时间复杂度应该为O(n<sup>2</sup>+m)。</p>
-</li>
-<li><p>邻接链表</p>
-<p> 现在回想一下，在邻接矩阵的解决方案中，使用的队列，就相当于邻接链表。那我们就省去了构建队列的时间，时间复杂度O(m)。</p>
- <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i from <span class="number">1</span> to n</span><br><span class="line">    foreach j in g-&gt;edges[i]</span><br><span class="line">        foreach k in g-&gt;edges[j]</span><br><span class="line">            insert_edges(square_g-&gt;edges, i, k, TRUE)</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="5-13">5-13</h4><p>题目</p>
-<p>A vertex cover of a graph G=(V,E) is a subset of vertices V′ such that each edge in E is incident on at least one vertex of V′.<br>(a) Give an efficient algorithm to find a minimum-size vertex cover if G is a tree.<br>(b) Let G=(V,E) be a tree such that the weight of each vertex is equal to the degree of that vertex. Give an efficient algorithm to find a minimum-weight vertex cover of G.<br>(c) Let G=(V,E) be a tree with arbitrary weights associated with the vertices. Give an efficient algorithm to find a minimum-weight vertex cover of G.</p>
-<p>解答</p>
-<ul>
-<li><p>(a) 解决思路如下：</p>
-<ol>
-<li>叶节点l是不能要的，因为一个叶节点才连一条边，性价比太低了。</li>
-<li>那就需要叶节点的父节点p。</li>
-<li>p的父节点也就不需要了。</li>
-<li><p>删除p子树，就会得到一颗新的树。重复操作，直到得到空树或只有一个节点的树。</p>
-<p>怎么证明，该算法得到的就是最小的集合？<br>因为我们每次移去的子树，都尽量以一个中心节点，带走尽量多的边，那么最后得到的节点的集合，必然是最小的。</p>
-<p>插图如下(以2叉树做例子)：</p>
-<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-13b.jpg" alt="顶点覆盖1"><br><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-13a.jpg" alt="顶点覆盖2"></p>
-</li>
-</ol>
-</li>
-<li><p>(b) 任何一条边在V’中至少有一个节点，那么V’中所有节点的度的和sum至少为m（图G的边的总数）减少V’中相邻节点的数量，就能降低sum的值。使用(a)中的方法，可以尽量降低sum的值，因为在(a)中选择的点尽量是隔代选择。另外的隔代选择方案是吧叶节点以及他们的父亲的父亲作为目标节点，得到的V’同样是尽量小的。</p>
-</li>
-<li><p>(c) 待定<br>  要把树作为有向图处理吗？虽然我们把树表示成带箭头的，但是树是无向图，<a href="http://en.wikipedia.org/wiki/Tree_%28graph_theory%29" target="_blank" rel="external">维基百科</a>。</p>
-</li>
-</ul>
-<h4 id="5-14">5-14</h4><p>题目</p>
-<p>A <em>vertex cover</em> of a graph G=(V,E) is a subset of vertices V′∈V such that every edge in E contains at least one vertex from V′. Delete all the leaves from any depth-first search tree of G. Must the remaining vertices form a vertex cover of G? Give a proof or a counterexample.</p>
-<p>解答</p>
-<p>否定。反例：<br>下图得到的DFS序列可以是[1, 3, 2]，叶节点为2,3。那么V’={1}。并不是一个顶点覆盖。</p>
-<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-14.JPG" alt="5-14反例"></p>
-<h4 id="5-15">5-15</h4><p>题目</p>
-<p>A vertex cover of a graph G=(V,E) is a subset of vertices V′∈V such that every edge in E contains at least one vertex from V′. An independent set of graph G=(V,E) is a subset of vertices V′∈V such that no edge in E contains both vertices from V′.<br>An <em>independent vertex cover</em> is a subset of vertices that is both an independent set and a vertex cover of G. Give an efficient algorithm for testing whether G contains an independent vertex cover. What classical graph problem does this reduce to?</p>
-<p>解答</p>
-<p>着色问题。愣是没有想到。</p>
-<h4 id="5-16">5-16</h4><p>题目</p>
-<p>An <em>independent set</em> of an undirected graph G=(V,E) is a set of vertices U such that no edge in E is incident on two vertices of U.</p>
-<p>(a) Give an efficient algorithm to find a maximum-size independent set if G is a tree.<br>(b) Let G=(V,E) be a tree with weights associated with the vertices such that the weight of each vertex is equal to the degree of that vertex. Give an efficient algorithm to find a maximum independent set of G.<br>(c) Let G=(V,E) be a tree with arbitrary weights associated with the vertices. Give an efficient algorithm to find a maximum independent set of G.</p>
-<p>解答</p>
-<ul>
-<li><p>(a) 基于5-15给出的答案。我们可以先把图着色，然后遍历得到不同颜色的序列，去较短的序列作为最小的独立集合。若不能着色，则不存在最小独立集合。</p>
-</li>
-<li><p>(b) 有以下几点需要注意：</p>
-</li>
-</ul>
-<ol>
-<li>树肯定是可以着色的。</li>
-<li>着色方案是固定的：孩子与父亲是相反的颜色。</li>
-<li>题目要求找到最大的独立集合。</li>
-</ol>
-<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-16-b.JPG" alt="二叉树着色"></p>
-<p>先着色，进行一次遍历，将不同颜色的放入两个序列，取总度的和较大者。</p>
-<p>不进行着色的处理方案:设置root颜色为0，则其子为1。递归遍历左右子树，时间复杂度为O(n)。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void <span class="function"><span class="title">classify</span><span class="params">(root, color)</span></span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="attribute">color</span> = <span class="number">0</span> then</span><br><span class="line">        put root into list1</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        put root into list2</span><br><span class="line">    <span class="keyword">if</span> root-&gt;<span class="attribute">left</span> then</span><br><span class="line">        <span class="function"><span class="title">classify</span><span class="params">(root-&gt;left, !color)</span></span></span><br><span class="line">    <span class="keyword">if</span> root-&gt;<span class="attribute">right</span> then</span><br><span class="line">        <span class="function"><span class="title">classify</span><span class="params">(root-&gt;right, !color)</span></span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>(c) 与(b)的不同仅仅是最后，取权重的和的较大者。</li>
-</ul>
-<h4 id="5-17">5-17</h4><p>题目</p>
-<p>Consider the problem of determining whether a given undirected graph G=(V,E) contains a triangle or cycle of length 3.</p>
-<p>(a) Give an O(|V|<sup>3</sup>) to find a triangle if one exists.<br>Improve your algorithm to run in time O(|V|·|E|). You may assume |V|≤|E|.<br>(b) Observe that these bounds gives you time to convert between the adjacency matrix and adjacency list representations of G.</p>
-<p>解答</p>
-<ul>
-<li><p>(a) Brute force。</p>
-  <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">each</span> inode <span class="operator">in</span> V <span class="built_in">do</span></span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">each</span> jnode <span class="operator">in</span> Adj[inode] <span class="built_in">do</span></span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">each</span> knode <span class="operator">in</span> Adj[jnode] <span class="built_in">do</span></span><br><span class="line">            <span class="keyword">for</span> <span class="keyword">each</span> lnode <span class="operator">in</span> Adj[knode] <span class="built_in">do</span></span><br><span class="line">                <span class="keyword">if</span> lnode = inode <span class="keyword">then</span></span><br><span class="line">                    <span class="constant">return</span> <span class="constant">true</span></span><br></pre></td></tr></table></figure>
-<p>  时间复杂度是O(n<sup>4</sup>)，看样子不符合题目的要求。</p>
-</li>
-<li><p>(b) DFS。</p>
-<p>  DFS可以发现图中的环，那么当检测到环时，可以进进一步检测环的大小是否为3.采用的就是DFS一次遍历，因此时间复杂度是O(|V|+|E|)。</p>
-  <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">process_edge(v, y):</span><br><span class="line">    <span class="keyword">if</span> parent[parent[x]] = y <span class="keyword">then</span></span><br><span class="line">        <span class="variable">is_triangle =</span> <span class="constant">true</span></span><br><span class="line">        <span class="variable">finish =</span> <span class="constant">true</span></span><br></pre></td></tr></table></figure>
-<p>  <img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 5-17.JPG" alt="5-17"></p>
-<p>  github仓库源码及测试数据:<a href="https://github.com/Shitaibin/The-Algorithm-Design-Manual/blob/master/5.11/5-17.c" target="_blank" rel="external">传送门—&gt;</a></p>
-</li>
-</ul>
-<h4 id="5-18">5-18</h4><p>题目</p>
-<p>Consider a set of movies M1, M2, … , Mk. There is a set of customers, each one of which indicates the two movies they would like to see this weekend. Movies are shown on Saturday evening and Sunday evening. Multiple movies may be screened at the same time. You must decide which movies should be televised on Saturday and which on Sunday, so that every customer gets to see the two movies they desire. Is there a schedule where each movie is shown at most once? Design an efficient algorithm to find such a schedule if one exists.</p>
-<p>解答</p>
-<p>问题原型：着色问题。把相邻的顶点安排在不同的时间。</p>
-<p>最好的情况是符合着色问题，那么每个电影只需要放一遍。因此我们可以使用着色问题的算法解决这个问题，当着色失败时，则不存在这样最优的调度算法。</p>
-<p><strong>思考</strong>：与着色问题不同的是电影可以放两次，怎样才能让总播放的次数达到最小呢？</p>
-<p>电影可以放两次就相当于让一个点拥有两个颜色，在着色的过程中如果出现冲突，将此点标记为<code>double-color</code>，与他相连的还未着色的点可以是任意的颜色，那么如何才能保证全局最小呢？</p>
-<h4 id="5-19">5-19</h4><p>题目</p>
-<p>The <em>diameter</em> of a tree T=(V,E) is given by max u,v∈Vδ(u,v) (where δ(u,v) is the number of edges on the path from u to v). Describe an efficient algorithm to compute the diameter of a tree, and show the correctness and analyze the running time of your algorithm.</p>
-<p>解答</p>
-<p>最长路径。</p>
-<p>称diameter最顶层的节点定义了diameter。那么对任意节点都存在两种情况：</p>
-<ol>
-<li>该节点定义了diameter。</li>
-<li>该节点的任一子节点定义了diameter。</li>
-</ol>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">diameter</span><span class="params">(tree)</span></span>:</span><br><span class="line">    maxdiameter = <span class="number">0</span></span><br><span class="line">    maxdepth = secdepth = -<span class="number">1</span></span><br><span class="line">    foreach child <span class="keyword">in</span> <span class="function"><span class="title">children</span><span class="params">(tree)</span></span> do</span><br><span class="line">        depth, diameter = <span class="function"><span class="title">diameter</span><span class="params">(child)</span></span></span><br><span class="line">        <span class="keyword">if</span> diameter &gt; maxdiameter then</span><br><span class="line">            maxdiameter = diameter</span><br><span class="line">        <span class="keyword">if</span> depth &gt;= maxdepth then</span><br><span class="line">            secdepth = maxdepth</span><br><span class="line">            maxdepth = depth</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> depth &gt; secdepth then</span><br><span class="line">            secdepth = depth</span><br><span class="line">    return maxdepth, <span class="function"><span class="title">max</span><span class="params">(maxdiameter, maxdepth+secdepth+<span class="number">2</span>)</span></span></span><br></pre></td></tr></table></figure>
-<h4 id="5-20">5-20</h4><p>题目</p>
-<p>Given an undirected graph G with n vertices and m edges, and an integer k, give an O(m+n) algorithm that finds the maximum induced subgraph H of G such that each vertex in H has degree ≥k, or prove that no such graph exists. An induced subgraph F=(U,R) of a graph G=(V,E) is a subset of U of the vertices V of G, and all edges R of G such that both vertices of each edge are in U.</p>
-<p>解答</p>
-<p>寻找最大的导图。特性：</p>
-<ol>
-<li>U中所有顶点的度&gt;=K。</li>
-<li>R中所有边的顶点都在U中。</li>
-</ol>
-<p>假设图的存储使用的是邻接链表。</p>
-<p>暴力方法：<br>一次基础遍历得到符合条件的队列O(n+m)，排序O(nlogn)。<br>再次基础遍历O(n+m)看该节点的相邻节点在不在队列之中O(logn)。</p>
-<p>借助DFS：</p>
-<p>思想：</p>
-<ul>
-<li>所有的边都遍历一次，然后判断是否符合要求。</li>
-<li>不使用课本提供的DFS框架，使用简化的DFS。</li>
-<li>发现新顶点时，递归新的顶点。</li>
-<li>若该点已被发现但还未处理，处理边(v,y)，这样确保了所有的边只处理一遍。</li>
-</ul>
-<p>Github：<a href="https://github.com/Shitaibin/The-Algorithm-Design-Manual/blob/master/5.11/5-20.c" target="_blank" rel="external">传送门</a>。</p>
-<h4 id="5-21">5-21</h4><p>题目</p>
-<p>Let v and w be two vertices in a directed graph G=(V,E). Design a linear-time algorithm to find the number of different shortest paths (not necessarily vertex disjoint) between v and w. Note: the edges in G are unweighted.</p>
-<p>解答</p>
-<p>有向图的最短段路径。求数量。</p>
-<p>假设v指向y1，已知y1到w的最短距离l和路径的数量c。那么从v通过y1到w的最短距离是(l+1)，数量是c。同时，v还指向了y2等其他节点，其他的路径，有影响的只有两种情况：</p>
-<ol>
-<li>距离等于(l+1)，则sl = l, c=c+n。</li>
-<li>距离小于(l+1)，则sl = l’, c=n’。</li>
-</ol>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">no_of_shortest_path(v, w):</span><br><span class="line">    <span class="variable">is_first_child =</span> <span class="constant">true</span></span><br><span class="line">    foreach child <span class="keyword">in</span> children(v) do</span><br><span class="line">        l, <span class="variable">n =</span> no_of_shortest_path(child, w)</span><br><span class="line">        <span class="keyword">if</span> is_first_child <span class="keyword">then</span></span><br><span class="line">            <span class="variable">sl =</span> l</span><br><span class="line">            <span class="variable">c =</span> n</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> l &lt; sl <span class="keyword">then</span></span><br><span class="line">            <span class="variable">sl =</span> l</span><br><span class="line">            <span class="variable">c =</span> n</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> <span class="variable">l =</span> sl <span class="keyword">then</span></span><br><span class="line">            <span class="variable">c =</span> c+n</span><br><span class="line">    return sl+<span class="number">1</span>, c</span><br></pre></td></tr></table></figure>
-<p><strong>BFS</strong><br>答案Wiki页面给出的答案更好，因为进行了剪枝：使用BFS，记录每个节点的level，当第一次遇到w时，记录w的level作为最小路径sl，计算有多少次遇到w时level等于sl，若某次的level小于sl，则更新sl，若level超过了sl还没有遇到w则停止进一步扩展顶点。</p>
-<p>github：<a href="https://github.com/Shitaibin/The-Algorithm-Design-Manual/blob/master/5.11/5-21.c" target="_blank" rel="external">时光机</a></p>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2015/05/04/Ch5-Exercises-and-Solutions-of-TADM2E/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -327,28 +177,25 @@
     </header>
     <div class="entry">
       
-        
-          <div id="toc" class="toc-article">
-          <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料列表"><span class="toc-number">1.</span> <span class="toc-text">参考资料列表</span></a></li></ol>
-          </div>
-        
         <blockquote>
 <p>事总得一步一步来，记录一些参考资料。</p>
 </blockquote>
 <h1 id="参考资料列表">参考资料列表</h1><ol>
-<li><a href="http://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="external">Hexo 主人Tommy吐槽</a></li>
-<li><a href="http://yangruihan.com/2015/03/22/Windows%E4%B8%8B%E4%B8%80%E6%AD%A5%E6%AD%A5%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8%20GitHub%20Pages%20+%20Hexo%20%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/" target="_blank" rel="external">安装 Hexo</a></li>
-<li>评论系统: <a href="http://zipperary.com/2013/05/30/hexo-guide-4/" target="_blank" rel="external">参考资料1</a>，<a href="http://zhidao.baidu.com/link?url=zE0f91IjLHKzR5FEr_-aMwL6SrHSSfltLyKaTErrZ_DTcqan-xQu2IBGMo52ntBLz-vvsjO4zkPckiXBBVptbb6WR3dGu7nq_a5AFy3GKBW" target="_blank" rel="external">参考资料2</a></li>
-<li><a href="http://vkki.me/2014/02/04/beautify-your-hexo/" target="_blank" rel="external">修改字体</a></li>
-<li><a href="http://ju.outofmemory.cn/entry/79930" target="_blank" rel="external">网页加载慢</a></li>
-<li><a href="http://www.twiceyuan.com/2015/01/12/%E4%B8%BAHexo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/" target="_blank" rel="external">文章目录</a></li>
+<li><a href="http://zespia.tw/blog/2012/10/11/hexo-debut/">Hexo 主人Tommy吐槽</a></li>
+<li><a href="http://yangruihan.com/2015/03/22/Windows%E4%B8%8B%E4%B8%80%E6%AD%A5%E6%AD%A5%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8%20GitHub%20Pages%20+%20Hexo%20%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/">安装 Hexo</a></li>
+<li>评论系统: <a href="http://zipperary.com/2013/05/30/hexo-guide-4/">参考资料1</a>，<a href="http://zhidao.baidu.com/link?url=zE0f91IjLHKzR5FEr_-aMwL6SrHSSfltLyKaTErrZ_DTcqan-xQu2IBGMo52ntBLz-vvsjO4zkPckiXBBVptbb6WR3dGu7nq_a5AFy3GKBW">参考资料2</a></li>
+<li><a href="http://vkki.me/2014/02/04/beautify-your-hexo/">修改字体</a></li>
+<li><a href="http://ju.outofmemory.cn/entry/79930">网页加载慢</a></li>
+<li><a href="http://www.twiceyuan.com/2015/01/12/%E4%B8%BAHexo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/">文章目录</a></li>
 </ol>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2015/05/02/Hexo-搭建博客参考资料列表/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -376,16 +223,10 @@
     </header>
     <div class="entry">
       
-        
-          <div id="toc" class="toc-article">
-          <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目Wiki及参考答案"><span class="toc-number">1.</span> <span class="toc-text">题目Wiki及参考答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的解答"><span class="toc-number">2.</span> <span class="toc-text">我的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#面试问题"><span class="toc-number">2.1.</span> <span class="toc-text">面试问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-45"><span class="toc-number">2.1.1.</span> <span class="toc-text">4-45</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#变形及分析"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">变形及分析</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-46"><span class="toc-number">2.1.2.</span> <span class="toc-text">4-46</span></a></li></ol></li></ol></li></ol>
-          </div>
-        
         <blockquote>
 <p>列出的解答仅为自己的思路，仅供参考，欢迎指出错误。</p>
 </blockquote>
-<h2 id="题目Wiki及参考答案">题目Wiki及参考答案</h2><p><a href="http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Sorting-searching-TADM2E" target="_blank" rel="external">http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Sorting-searching-TADM2E</a></p>
+<h2 id="题目Wiki及参考答案">题目Wiki及参考答案</h2><p><a href="http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Sorting-searching-TADM2E">http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Sorting-searching-TADM2E</a></p>
 <h2 id="我的解答">我的解答</h2><h3 id="面试问题">面试问题</h3><h4 id="4-45">4-45</h4><p>题目</p>
 <p>Given a search string of three words, find the smallest snippet of the document that contains all three of the search words—-i.e., the snippet with smallest number of words in it. You are given the index positions where these words occur in the document, such as word1: (1, 4, 5), word2: (3, 9, 10), and word3: (2, 6, 15). Each of the lists are in sorted order, as above.</p>
 <p>解答</p>
@@ -397,25 +238,14 @@
 <li>如果<code>min_len</code>为-1或<code>min_len</code>大于<code>len</code>，<code>min_len = len</code>，保存三元组.</li>
 <li>删除三元组中最小者<code>min</code>，若<code>min</code>对应队列不空，取新元素加入到三元组，执行2，若空，退出循环。</li>
 </ol>
-<h5 id="变形及分析">变形及分析</h5><p>变形</p>
-<p>假设输入数据不是3个单词的出现位置，而直接是一个字符串数组，那么如何找到满足要求的最小片段？</p>
-<p>分析</p>
-<p>设<code>cur</code>为访问数组的当前位置，3个变量<code>l1, l2, l3</code>，代表<code>cur</code>前面离<code>cur</code>最近的3个单词(w1, w2, w3)的位置。若cur上的单词为3个单词之一，不妨设为w3，则计算w3与w1,w2的距离即<code>cur-l1+1</code>和<code>cur-l2+1</code>，取小者为<code>min</code>，另<code>min</code>与<code>min_len</code>比较，若min更小，保存<code>min</code>，及当前3个单词的位置。当遍历数组结束时，最后的<code>min_len</code>与保存的3元素的位置即满足要求的最小片段。</p>
-<h4 id="4-46">4-46</h4><p>题目</p>
-<p>You are given 12 coins. One of them is heavier or lighter than the rest. Identify this coin in just three weighings.<br>Note - weighings are with a balance, where you can have a greater than, equal to, or less than result. You can’t do this with a digital scale.</p>
-<p>解答</p>
-<p>答案Wiki之中给出的3步解决的办法，但是我想不到这个解决方案。下面讨论一下 <strong>二分搜索</strong>在这里的应用。</p>
-<p>题目是不知道是偏重还是偏轻的，如果知道偏重或偏轻，用二分搜索可3步解决。这种情况下，可以使用4步二分搜索。</p>
-<ol>
-<li>分为3堆，各4个硬币，记为a, b, c.</li>
-<li>比较(a, b) 和 (a, c). a, b, c三者中必有一个是偏大或偏小，从这两次比较重可得谁偏大或偏小。</li>
-<li>假设得到的是a偏大，再将a进行两次二分搜索，即可的偏大的那枚硬币。</li>
-</ol>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2015/05/01/Ch4-Exercises-and-Solutions-of-TADM2E/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -443,12 +273,6 @@
     </header>
     <div class="entry">
       
-        
-          <div id="toc" class="toc-article">
-          <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原则"><span class="toc-number">1.</span> <span class="toc-text">原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#待办列表"><span class="toc-number">2.</span> <span class="toc-text">待办列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完成列表"><span class="toc-number">3.</span> <span class="toc-text">完成列表</span></a></li></ol>
-          </div>
-        
         <blockquote>
 <p>事情总要一步一步来，慢慢完善博客。</p>
 </blockquote>
@@ -458,28 +282,20 @@
 <li>从待办列表任选一条，不必按顺序</li>
 </ol>
 <h3 id="待办列表">待办列表</h3><ol>
-<li>主页不许要显示全文</li>
 <li>修改footer样式</li>
 <li>调整目录样式，显示序号太难看了</li>
-<li>代码背景改成黑色</li>
-<li>Google搜索无结果</li>
+<li>代码背景改成黑色(连锁反应：代码字体颜色需要改)</li>
+<li>Google搜索无结果(真心感觉用不到，目前)</li>
+<li>统计访问量：<a href="http://ibruce.info/2015/04/04/busuanzi/">http://ibruce.info/2015/04/04/busuanzi/</a></li>
 </ol>
-<h3 id="完成列表">完成列表</h3><ol>
-<li>为博客添加评论系统</li>
-<li>修改字体（大小、样式）</li>
-<li>改变404</li>
-<li><a href="/2015/05/06/Optimize-of-hexo-blog/">优化加载速度</a></li>
-<li>取消分享: <code>layout\...\article.ejs</code>删除<code>&lt;%- partial(&#39;post/share&#39;) %&gt;</code></li>
-<li>去掉页面中众多的<code>box_shadow</code>效果</li>
-</ol>
-<ol>
-<li>修改多说，去掉不必要的账号登陆：人人，豆瓣，开心(没有提供接口)</li>
-</ol>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2015/05/01/完善博客待办列表/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -507,30 +323,20 @@
     </header>
     <div class="entry">
       
-        
-          <div id="toc" class="toc-article">
-          <strong class="toc-title">文章目录</strong>
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#值得思考的事情"><span class="toc-number">1.</span> <span class="toc-text">值得思考的事情</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
-          </div>
-        
         <h1 id="值得思考的事情">值得思考的事情</h1><ol>
 <li>为什么要搭博客？</li>
 <li>你能坚持写作吗？</li>
 </ol>
 <p>如果不能回答第一个问题，或者也不能坚持，还是放弃吧，因为搭博客很烦人，如果不能坚持，大博客就变成浪费时间了，不如写写代码。</p>
 <p>我现在搭这个博客，是为了把 <em>The Algorithm Design Manual</em> 上的部分习题记录下来。找一件事做，才有东西可写，才能坚持下去。</p>
-<h1 id="参考资料">参考资料</h1><p>参考资料众多，我再写一篇就是，重复造轮子了。</p>
-<p>参考资料：<a href="http://yangruihan.com/" target="_blank" rel="external">http://yangruihan.com/</a> 。他采用了Github Pages + Hexo，风格个人比较喜欢，之前也用jekyII，Octopress搭过，目前Hexo看起来更舒服，并且过程相对简单。</p>
-<p>安装时有以下建议：</p>
-<ol>
-<li>安装Node.js后，更改为国内源，不然安装Hexo慢…<br> 参考：<a href="http://yijiebuyi.com/blog/b12eac891cdc5f0dff127ae18dc386d4.html" target="_blank" rel="external">http://yijiebuyi.com/blog/b12eac891cdc5f0dff127ae18dc386d4.html</a></li>
-<li>yangruihan提到的Node.js安装失败，重启主机即可。</li>
-</ol>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2015/05/01/Github-Pages-Hexo部署总结/#more" class="more-link">Read More</a>
+          </div>
         
         
       
