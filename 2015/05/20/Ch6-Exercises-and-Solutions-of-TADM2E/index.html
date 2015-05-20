@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ch6 Exercises and Solutions of TADM2E | James&#39;s Blog</title>
+  <meta name="author" content="James Shi">
+  
+  <meta name="description" content="屌丝程序员的自留地#为搜索引擎留的">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Ch6 Exercises and Solutions of TADM2E"/>
+  <meta property="og:site_name" content="James&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="James&#39;s Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">James&#39;s Blog</a></h1>
+  <h2><a href="/">码农 登山 骑行 摄影</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/archives">文章列表</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-05-20T08:08:31.000Z"><a href="/2015/05/20/Ch6-Exercises-and-Solutions-of-TADM2E/">2015-05-20</a></time>
+      
+      
+  
+    <h1 class="title">Ch6 Exercises and Solutions of TADM2E</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        
+          <div id="toc" class="toc-article">
+          <strong class="toc-title">文章目录</strong>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目Wiki及参考答案"><span class="toc-number">1.</span> <span class="toc-text">题目Wiki及参考答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的解答"><span class="toc-number">2.</span> <span class="toc-text">我的解答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MST"><span class="toc-number">2.1.</span> <span class="toc-text">MST</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2_最短路径与MST"><span class="toc-number">2.1.1.</span> <span class="toc-text">6-2 最短路径与MST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-3_最短路径与MST"><span class="toc-number">2.1.2.</span> <span class="toc-text">6-3 最短路径与MST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-4_Prim和Kruskal得到MST是否相同"><span class="toc-number">2.1.3.</span> <span class="toc-text">6-4 Prim和Kruskal得到MST是否相同</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-5_Prim和Kruskal边权值是否可为负"><span class="toc-number">2.1.4.</span> <span class="toc-text">6-5 Prim和Kruskal边权值是否可为负</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-6_添加边，获得新的MST"><span class="toc-number">2.1.5.</span> <span class="toc-text">6-6 添加边，获得新的MST</span></a></li></ol></li></ol></li></ol>
+          </div>
+        
+        <blockquote>
+<p>列出的解答仅为自己的思路，仅供参考，欢迎指出错误。</p>
+</blockquote>
+<h2 id="题目Wiki及参考答案">题目Wiki及参考答案</h2><p><a href="http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Weighted-graphs-TADM2E" target="_blank" rel="external">http://www.algorithm.cs.sunysb.edu/algowiki/index.php/Weighted-graphs-TADM2E</a></p>
+<h2 id="我的解答">我的解答</h2><h3 id="MST">MST</h3><h4 id="6-2_最短路径与MST">6-2 最短路径与MST</h4><p>题目</p>
+<p>Is the path between two vertices in a minimum spanning tree necessarily a shortest path between the two vertices in the full graph? Give a proof or a counterexample.</p>
+<p>解答</p>
+<p>MST中两点间的路径不是该两点在整个图中的最短路径。</p>
+<p><strong>反例：</strong>使用习题5-1的图，使用Kruskal得到的MST是：</p>
+<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 6-2-1.JPG" alt="习题5-1图"><br><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 6-2.JPG" alt="习题5-1图的MST"></p>
+<p>路径A-&gt;I：A-&gt;D-&gt;G-&gt;J-&gt;I。路径长度为13，而在整个图中，路劲为A-&gt;I，长度为9。结果已显然。</p>
+<a id="more"></a>
+<h4 id="6-3_最短路径与MST">6-3 最短路径与MST</h4><p>题目</p>
+<p>Assume that all edges in the graph have distinct edge weights (i.e., no pair of edges have the same weight). Is the path between a pair of vertices in a minimum spanning tree necessarily a shortest path between the two vertices in the full graph? Give a proof or a counterexample.</p>
+<p>解答</p>
+<p>否。</p>
+<p><img src="http://7xixtr.com1.z0.glb.clouddn.com/Ex 6-3.JPG" alt="反例图及其MST"></p>
+<p>考虑B到D的路径，在图中路径长度为6，而在MST中路径长度为7。</p>
+<h4 id="6-4_Prim和Kruskal得到MST是否相同">6-4 Prim和Kruskal得到MST是否相同</h4><p>题目</p>
+<p>Can Prim’s and Kruskal’s algorithm yield different minimum spanning trees? Explain why or why not.</p>
+<p>解答</p>
+<p>在6-1中，Prim与Kruskal就可以产生不同MST。只有当MST本身唯一的时候，由Prim与Kruskal得到的MST才是相同的。</p>
+<p>MST唯一的条件：所有边的权值都不相同。</p>
+<h4 id="6-5_Prim和Kruskal边权值是否可为负">6-5 Prim和Kruskal边权值是否可为负</h4><p>题目</p>
+<p>Does either Prim’s and Kruskal’s algorithm work if there are negative edge weights? Explain why or why not.</p>
+<p>解答</p>
+<p>思考得到的想法和Wiki页面的想法是类似的，但我还不会严谨的证明。</p>
+<p>每条边都会被访问一次，并且只是比较边的大小，既然是仅仅比较大小，那么与正负是没有关系的。不会像Dijkstra那样对边的权值有加法操作，会影响整体的结果。</p>
+<h4 id="6-6_添加边，获得新的MST">6-6 添加边，获得新的MST</h4><p>题目</p>
+<p>Suppose we are given the minimum spanning tree T of a given graph G (with n vertices and m edges) and a new edge e=(u,v) of weight w that we will add to G. Give an efficient algorithm to find the minimum spanning tree of the graph G+e. Your algorithm should run in O(n) time to receive full credit.</p>
+<p>解答</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/TADM/">TADM</a>, <a href="/tags/图论/">图论</a>, <a href="/tags/搜索/">搜索</a>, <a href="/tags/面试/">面试</a>
+  </div>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2015/05/20/Ch6-Exercises-and-Solutions-of-TADM2E/" data-title="Ch6 Exercises and Solutions of TADM2E" data-url="http://shitaibin.github.io/2015/05/20/Ch6-Exercises-and-Solutions-of-TADM2E/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"stb"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:shitaibin.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/教程/">教程</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Github-Pages/">Github Pages</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>3</small></li>
+  
+    <li><a href="/tags/TADM/">TADM</a><small>3</small></li>
+  
+    <li><a href="/tags/图论/">图论</a><small>2</small></li>
+  
+    <li><a href="/tags/待办/">待办</a><small>1</small></li>
+  
+    <li><a href="/tags/排序/">排序</a><small>1</small></li>
+  
+    <li><a href="/tags/搜索/">搜索</a><small>3</small></li>
+  
+    <li><a href="/tags/面试/">面试</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015 James Shi
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
