@@ -9,7 +9,7 @@
   padding: 0;
 }
 body {
-  background: #dcdcdc;
+  background: #eee;
   color: #111;
   font-family: "Georgia", serif;
   font-size: 14px;
@@ -157,7 +157,7 @@ article.link .icon:before {
 }
 article.link .title a:after {
   content: '\f08e';
-  color: #111;
+  color: #999;
   font: 12px FontAwesome;
   padding-left: 10px;
   vertical-align: super;
@@ -258,7 +258,7 @@ article header .icon:before {
   text-align: center;
 }
 article header time {
-  color: #111;
+  color: #999;
   font: 0.9em "Georgia", serif;
   margin-bottom: 5px;
   display: block;
@@ -315,10 +315,11 @@ article .entry pre {
   font-family: Monaco, Menlo, Consolas, Courier New, monospace;
 }
 article .entry code {
-  background: #fff;
+  background: #eee;
   color: #666;
   padding: 0 5px;
   margin: 0 2px;
+  font-size: 0.8em;
   border: 1px solid #ddd;
   -webkit-border-radius: 1px;
   border-radius: 1px;
@@ -381,7 +382,7 @@ article .entry iframe {
 article .entry .caption {
   display: block;
   margin-top: 5px;
-  color: #111;
+  color: #999;
   position: relative;
   font-size: 1em;
   padding-left: 25px;
@@ -424,14 +425,14 @@ article footer {
   margin-top: 15px;
   padding-top: 10px;
   border-top: 1px solid #ddd;
-  color: #111;
+  color: #999;
   font-size: 1em;
   line-height: 16px;
   position: relative;
   min-height: 16px;
 }
 article footer a {
-  color: #111;
+  color: #999;
 }
 article footer a:hover {
   color: #258fb8;
@@ -567,7 +568,7 @@ ol.toc {
   display: block;
   padding: 5px 10px;
   background: #ddd;
-  color: #111;
+  color: #999;
   font-family: "Georgia", serif;
   text-shadow: 0 0 1px #fff;
   margin-bottom: 50px;
@@ -589,7 +590,7 @@ ol.toc {
   font-family: FontAwesome;
 }
 .archive-title {
-  color: #111;
+  color: #999;
   font-weight: normal;
   margin-bottom: 30px;
   text-shadow: 0 0 1px #fff;
@@ -673,14 +674,14 @@ ol.toc {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #111;
+  color: #999;
 }
 #sidebar .search input:focus {
   color: #111;
 }
 #sidebar .tag small {
   margin-left: 15px;
-  color: #111;
+  color: #999;
 }
 #sidebar .tag small:before {
   content: '(';
@@ -699,7 +700,7 @@ ol.toc {
 #sidebar .twitter small {
   display: block;
   margin-top: 10px;
-  color: #111;
+  color: #999;
   line-height: 1;
 }
 #sidebar .tagcloud .entry {
@@ -710,13 +711,13 @@ ol.toc {
   display: inline-block;
 }
 #footer {
-  color: #111;
+  color: #999;
   margin-bottom: 50px;
   font: 1.5em/1.6 "Georgia", serif;
   text-shadow: 0 0 1px #fff;
 }
 .entry .gist {
-  background: #ffd700;
+  background: #eee;
   border: 1px solid #ddd;
   margin-top: 15px;
   padding: 7px 15px;
@@ -734,7 +735,7 @@ ol.toc {
   font-size: 0.9em;
 }
 .entry .gist .gist-file .gist-data {
-  background: #ffd700;
+  background: none;
   border-bottom: none;
 }
 .entry .gist .gist-file .gist-data pre {
@@ -742,8 +743,8 @@ ol.toc {
   font-family: Monaco, Menlo, Consolas, Courier New, monospace;
 }
 .entry .gist .gist-file .gist-meta {
-  background: #ffd700;
-  color: #111;
+  background: none;
+  color: #999;
   margin-top: 5px;
   padding: 0;
   text-shadow: 0 0 1px #fff;
@@ -756,23 +757,22 @@ ol.toc {
   color: #258fb8;
 }
 figure.highlight {
-  background: #1c1c1c;
-  font-color: #fff;
+  background: #eee;
   border: 1px solid #ddd;
   margin-top: 15px;
   padding: 7px 15px;
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-  text-shadow: 0 0 2px #fff;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-shadow: 0 0 1px #fff;
   line-height: 1.6;
   overflow: auto;
   position: relative;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 figure.highlight figcaption {
-  color: #111;
+  color: #999;
   margin-bottom: 5px;
-  text-shadow: 0 0 4px #fff;
+  text-shadow: 0 0 1px #fff;
 }
 figure.highlight figcaption a {
   position: absolute;
@@ -782,22 +782,20 @@ figure.highlight pre {
   border: none;
   padding: 0;
   margin: 0;
-  background: #1c1c1c;
 }
 figure.highlight table {
   margin-top: 0;
   border-spacing: 0;
 }
 figure.highlight .gutter {
-  color: #fff;
+  color: #999;
   padding-right: 15px;
-  border-right: 1px solid;
   text-align: right;
 }
 figure.highlight .code {
-  padding-left: 0px;
+  padding-left: 15px;
   border-left: 1px solid #fff;
-  color: #1c1c1c;
+  color: #666;
 }
 figure.highlight .line {
   height: 20px;
@@ -809,7 +807,7 @@ pre .doctype,
 pre .pi,
 pre .lisp .string,
 pre .javadoc {
-  color: #fff;
+  color: #93a1a1;
 }
 pre .keyword,
 pre .winutils,
