@@ -138,7 +138,7 @@ a:hover {
 }
 article {
   background: #fff;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 article.page {
   padding-left: 20px;
@@ -484,7 +484,7 @@ article footer .addthis iframe {
   border-radius: 5px;
 }
 .toc-article .toc-title {
-  font-size: 120%;
+  font-size: 100%;
 }
 .toc-article strong {
   padding: 0.3em 1;
@@ -495,7 +495,7 @@ ol.toc {
 }
 #toc {
   line-height: 1em;
-  font-size: 1em;
+  font-size: 0.9em;
   float: right;
 }
 #toc .toc {
